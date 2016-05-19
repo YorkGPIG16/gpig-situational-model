@@ -11,6 +11,7 @@ dependencies {
 
 }
 
+
 jar {
     manifest {
         attributes 'Implementation-Title': 'GPIG Layer Services',
@@ -30,14 +31,9 @@ task sourcesJar(type: Jar) {
     from sourceSets.main.allSource
 }
 
-task javadocJar(type: Jar, dependsOn: Javadoc) {
-    classifier 'javadoc'
-    from Javadoc.destinationDir
-}
 
 artifacts {
     archives sourcesJar
-    archives javadocJar
 }
 
 publishing {
@@ -45,7 +41,6 @@ publishing {
         mavenJava(MavenPublication) {
             from components.java
             Artifact sourcesJar
-            Artifact javadocJar
 
             pom.withXml {
                 def root = asNode()
