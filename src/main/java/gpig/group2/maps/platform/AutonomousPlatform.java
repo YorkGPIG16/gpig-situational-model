@@ -14,8 +14,17 @@ public class AutonomousPlatform {
     Set<ObjectivesLayer> subscribesToObjectives;
 
 
+    WaypointsLayer waypoints;
+    HistoryLayer history;
+    PositionLayer position;
+
+
     public AutonomousPlatform() {
         subscribesToObjectives = new HashSet<>();
+
+        waypoints = new WaypointsLayer();
+        history = new HistoryLayer();
+        position = new PositionLayer();
     }
 
     public void addSubscriptionToObjective(ObjectivesLayer layer) {
