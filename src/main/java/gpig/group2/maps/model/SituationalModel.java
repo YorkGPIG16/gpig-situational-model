@@ -10,6 +10,9 @@ public class SituationalModel {
     List<Layer> allLayers;
 
 
+    public void RegisterAutonomousPlatform(AutonomousPlatform platform) {
+        LayerGroup lg = new APLayerGroup();
+    }
 
 
 
