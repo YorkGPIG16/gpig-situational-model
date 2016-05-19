@@ -11,9 +11,8 @@ public class SituationalModel {
 
 
     public void RegisterAutonomousPlatform(AutonomousPlatform platform) {
-        LayerGroup lg = new APLayerGroup();
+        LayerGroup lg = new APLayerGroup(platform);
+        allLayers.addAll(lg.getLayers());
     }
-
-
 
 }

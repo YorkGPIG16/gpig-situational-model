@@ -7,4 +7,9 @@ public class APLayerGroup extends LayerGroup {
 
 
 
+    public APLayerGroup(AutonomousPlatform platform) {
+
+        this.layers.add(new APObjectivesLayer());
+        this.layers.add(new APStatusReportingLayer());
+    }
 }
