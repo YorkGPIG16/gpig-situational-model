@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 
 @XmlRootElement(name="point")
-public class Point {
+public class Point extends Position {
     @XmlAttribute(name="latitude")
     private float latitude;
     @XmlAttribute(name="longitude")
