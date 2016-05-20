@@ -1,6 +1,6 @@
 package gpig.group2.maps.geographic.position;
 
-import gpig.group2.maps.geographic.Coordinate;
+import gpig.group2.maps.geographic.Point;
 import gpig.group2.maps.geographic.Position;
 
 import javax.xml.bind.annotation.XmlElement;

@@ -1,7 +1,6 @@
 package gpig.group2.maps.platform;
 
-import gpig.group2.maps.geographic.Coordinate;
-import gpig.group2.maps.geographic.position.Point;
+import gpig.group2.maps.geographic.Point;
 
 /**
  * Created by james on 20/05/2016.

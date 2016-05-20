@@ -1,11 +1,10 @@
 package gpig.group2.maps.geographic.position;
 
-import gpig.group2.maps.geographic.Coordinate;
+import gpig.group2.maps.geographic.Point;
 import gpig.group2.maps.geographic.Position;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
 import java.util.List;
 
 /**
@@ -16,5 +15,5 @@ import java.util.List;
 
 public class Shape extends Position {
     @XmlElement(name="coordinate")
-    protected List<Coordinate> coordinates;
+    protected List<Point> coordinates;
 }

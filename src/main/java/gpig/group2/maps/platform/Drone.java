@@ -1,8 +1,7 @@
 package gpig.group2.maps.platform;
 
-import gpig.group2.maps.geographic.Coordinate;
+import gpig.group2.maps.geographic.Point;
 import gpig.group2.maps.geographic.position.CoordinateList;
-import gpig.group2.maps.geographic.position.Point;
 
 import java.util.HashSet;
 import java.util.List;
