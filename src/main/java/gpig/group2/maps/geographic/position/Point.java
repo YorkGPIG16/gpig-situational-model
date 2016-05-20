@@ -12,4 +12,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Point extends CoordinateList {
     @XmlElement(name="coordinate")
     private Coordinate coordinate;
+
+    public Coordinate getPoint() {
+        return coordinate;
+    }
+
+
 }
