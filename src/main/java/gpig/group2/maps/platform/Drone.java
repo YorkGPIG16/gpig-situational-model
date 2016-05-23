@@ -57,4 +57,49 @@ public class Drone implements DroneUpdating {
 	public void setPosition(Point position) {
 		this.position = position;
 	}
+
+	@Override
+	public int hashCode() {
+
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((history == null) ? 0 : history.hashCode());
+		result = prime * result + ((position == null) ? 0 : position.hashCode());
+		result = prime * result + ((subscribesToObjectives == null) ? 0 : subscribesToObjectives.hashCode());
+		result = prime * result + ((waypoints == null) ? 0 : waypoints.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Drone other = (Drone) obj;
+		if (history == null) {
+			if (other.history != null)
+				return false;
+		} else if (!history.equals(other.history))
+			return false;
+		if (position == null) {
+			if (other.position != null)
+				return false;
+		} else if (!position.equals(other.position))
+			return false;
+		if (subscribesToObjectives == null) {
+			if (other.subscribesToObjectives != null)
+				return false;
+		} else if (!subscribesToObjectives.equals(other.subscribesToObjectives))
+			return false;
+		if (waypoints == null) {
+			if (other.waypoints != null)
+				return false;
+		} else if (!waypoints.equals(other.waypoints))
+			return false;
+		return true;
+	}
 }
