@@ -12,7 +12,7 @@ import java.util.List;
  * Created by james on 19/05/2016.
  */
 
-@XmlRootElement(name="coordinate-list")
+@XmlRootElement(name="coordinate_list")
 public class CoordinateList extends Position {
 
     public CoordinateList() {

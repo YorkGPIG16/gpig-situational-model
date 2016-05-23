@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * Created by james on 19/05/2016.
  */
 
-@XmlRootElement(name="bounding-box")
+@XmlRootElement(name="bounding_box")
 public class BoundingBox extends Position {
 
     @XmlElement(name="topleft")
