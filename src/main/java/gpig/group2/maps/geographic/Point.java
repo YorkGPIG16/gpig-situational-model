@@ -22,6 +22,12 @@ public class Point extends Position {
 		return longitude;
 	}
 
+	//Required for XML bindings!
+	public Point() {
+
+	}
+
+	
 	public Point(float latitude, float longitude) {
 		this.latitude = latitude;
 		this.longitude = longitude;
