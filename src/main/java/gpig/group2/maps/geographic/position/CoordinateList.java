@@ -25,4 +25,8 @@ public class CoordinateList extends Position {
     public void addCoordinate(Point position) {
         coordinates.add(position);
     }
+
+	public List<Point> getCoordinates() {
+		return coordinates;
+	}
 }
