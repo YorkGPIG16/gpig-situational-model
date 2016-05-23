@@ -59,4 +59,12 @@ public class Point extends Position {
 			return false;
 		return true;
 	}
+
+	public void setLatitude(float latitude) {
+		this.latitude = latitude;
+	}
+
+	public void setLongitude(float longitude) {
+		this.longitude = longitude;
+	}
 }
