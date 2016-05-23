@@ -14,8 +14,33 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class BoundingBox extends Position {
 
     @XmlElement(name="topleft")
-    private Point topLeft;
+    protected Point topLeft;
 
     @XmlElement(name="topright")
-    private Point bottomRight;
+    protected Point bottomRight;
+
+    public BoundingBox() {
+
+    }
+
+    public BoundingBox(Point topLeft, Point bottomRight) {
+        this.topLeft = topLeft;
+        this.bottomRight = bottomRight;
+    }
+
+    public Point getTopLeftX() {
+        return topLeft;
+    }
+
+    public void setTopLeft(Point topLeft) {
+        this.topLeft = topLeft;
+    }
+
+    public Point getBottomRightX() {
+        return bottomRight;
+    }
+
+    public void setBottomRight(Point bottomRight) {
+        this.bottomRight = bottomRight;
+    }
 }
