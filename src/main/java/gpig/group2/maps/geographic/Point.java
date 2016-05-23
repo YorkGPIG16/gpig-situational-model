@@ -28,8 +28,9 @@ public class Point extends Position {
 	}
 
 	
-	public Point(float latitude, float longitude) {
+	/*public Point(float latitude, float longitude) {
 		this.latitude = latitude;
 		this.longitude = longitude;
 	}
+	*/
 }
