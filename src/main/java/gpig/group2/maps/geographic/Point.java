@@ -14,11 +14,11 @@ public class Point extends Position {
 	@XmlAttribute(name = "longitude")
 	private float longitude;
 
-	public float getLatitude() {
+	public float getLatitudeX() {
 		return latitude;
 	}
 
-	public float getLongitude() {
+	public float getLongitudeX() {
 		return longitude;
 	}
 
