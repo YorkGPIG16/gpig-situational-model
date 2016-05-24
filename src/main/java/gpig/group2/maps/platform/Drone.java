@@ -10,6 +10,7 @@ public class Drone implements DroneUpdating {
 
 	Set<GivesObjectives> subscribesToObjectives;
 
+	private int id;
 	private CoordinateList waypoints;
 	private CoordinateList history;
 	private Point position;
@@ -21,41 +22,59 @@ public class Drone implements DroneUpdating {
 		history = new CoordinateList();
 		position = null;
 
-    }
+	}
 
 	public void addSubscriptionToObjective(GivesObjectives layer) {
+
 		subscribesToObjectives.add(layer);
 	}
 
 	@Override
 	public void updateLocation(Point newPosition) {
+
 		history.addCoordinate(position);
 		position = newPosition;
 
 	}
 
 	public CoordinateList getWaypoints() {
+
 		return waypoints;
 	}
 
 	public void setWaypoints(CoordinateList waypoints) {
+
 		this.waypoints = waypoints;
 	}
 
 	public CoordinateList getHistory() {
+
 		return history;
 	}
 
 	public void setHistory(CoordinateList history) {
+
 		this.history = history;
 	}
 
 	public Point getPosition() {
+
 		return position;
 	}
 
 	public void setPosition(Point position) {
+
 		this.position = position;
+	}
+
+	public int getId() {
+
+		return id;
+	}
+
+	public void setId(int id) {
+
+		this.id = id;
 	}
 
 	@Override
@@ -64,8 +83,8 @@ public class Drone implements DroneUpdating {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((history == null) ? 0 : history.hashCode());
+		result = prime * result + id;
 		result = prime * result + ((position == null) ? 0 : position.hashCode());
-		result = prime * result + ((subscribesToObjectives == null) ? 0 : subscribesToObjectives.hashCode());
 		result = prime * result + ((waypoints == null) ? 0 : waypoints.hashCode());
 		return result;
 	}
@@ -85,15 +104,12 @@ public class Drone implements DroneUpdating {
 				return false;
 		} else if (!history.equals(other.history))
 			return false;
+		if (id != other.id)
+			return false;
 		if (position == null) {
 			if (other.position != null)
 				return false;
 		} else if (!position.equals(other.position))
-			return false;
-		if (subscribesToObjectives == null) {
-			if (other.subscribesToObjectives != null)
-				return false;
-		} else if (!subscribesToObjectives.equals(other.subscribesToObjectives))
 			return false;
 		if (waypoints == null) {
 			if (other.waypoints != null)
