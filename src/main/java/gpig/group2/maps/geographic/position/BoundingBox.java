@@ -16,7 +16,7 @@ public class BoundingBox extends Position {
     @XmlElement(name="topleft")
     protected Point topLeft;
 
-    @XmlElement(name="topright")
+    @XmlElement(name="bottomright")
     protected Point bottomRight;
 
     public BoundingBox() {
