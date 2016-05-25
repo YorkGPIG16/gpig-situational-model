@@ -32,8 +32,8 @@ public class Drone implements DroneUpdating {
 	@Override
 	public void updateLocation(Point newPosition) {
 
-		history.addCoordinate(position);
 		position = newPosition;
+		history.addCoordinate(position);
 
 	}
 
@@ -82,10 +82,7 @@ public class Drone implements DroneUpdating {
 
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((history == null) ? 0 : history.hashCode());
 		result = prime * result + id;
-		result = prime * result + ((position == null) ? 0 : position.hashCode());
-		result = prime * result + ((waypoints == null) ? 0 : waypoints.hashCode());
 		return result;
 	}
 
@@ -99,22 +96,7 @@ public class Drone implements DroneUpdating {
 		if (getClass() != obj.getClass())
 			return false;
 		Drone other = (Drone) obj;
-		if (history == null) {
-			if (other.history != null)
-				return false;
-		} else if (!history.equals(other.history))
-			return false;
 		if (id != other.id)
-			return false;
-		if (position == null) {
-			if (other.position != null)
-				return false;
-		} else if (!position.equals(other.position))
-			return false;
-		if (waypoints == null) {
-			if (other.waypoints != null)
-				return false;
-		} else if (!waypoints.equals(other.waypoints))
 			return false;
 		return true;
 	}
