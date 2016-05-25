@@ -32,8 +32,8 @@ public class Drone implements DroneUpdating {
 	@Override
 	public void updateLocation(Point newPosition) {
 
-		history.addCoordinate(position);
 		position = newPosition;
+		history.addCoordinate(position);
 
 	}
 
