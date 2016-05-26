@@ -39,10 +39,11 @@ public class StrandedPerson {
 	public StrandedPerson() {
 	}
 
-	public StrandedPerson(Point location, int estimatedNumber, DateTime timeIdentified) {
+	public StrandedPerson(Point location, int estimatedNumber, DateTime timeIdentified, String imageUrl) {
 		this.location = location;
 		this.estimatedNumber = estimatedNumber;
 		this.timeIdentified = timeIdentified;
+		this.imageUrl = imageUrl;
 	}
 
 	@XmlTransient
