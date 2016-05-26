@@ -10,15 +10,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name="point")
 public class Point extends Position {
 	@XmlAttribute(name = "latitude")
-	private float latitude;
+	private Double latitude;
 	@XmlAttribute(name = "longitude")
-	private float longitude;
+	private Double longitude;
 
-	public float getLatitudeX() {
+	public Double getLatitudeX() {
 		return latitude;
 	}
 
-	public float getLongitudeX() {
+	public Double getLongitudeX() {
 		return longitude;
 	}
 
@@ -28,7 +28,7 @@ public class Point extends Position {
 	}
 
 
-	public Point(float latitude, float longitude) {
+	public Point(Double latitude, Double longitude) {
 		this.latitude = latitude;
 		this.longitude = longitude;
 	}
@@ -37,10 +37,10 @@ public class Point extends Position {
 	public int hashCode() {
 
 		final int prime = 31;
-		int result = 1;
-		result = prime * result + Float.floatToIntBits(latitude);
-		result = prime * result + Float.floatToIntBits(longitude);
-		return result;
+		Long result = 1L;
+		result = prime * result + Double.doubleToLongBits(latitude);
+		result = prime * result + Double.doubleToLongBits(longitude);
+		return result.intValue();
 	}
 
 	@Override
@@ -53,18 +53,18 @@ public class Point extends Position {
 		if (getClass() != obj.getClass())
 			return false;
 		Point other = (Point) obj;
-		if (Float.floatToIntBits(latitude) != Float.floatToIntBits(other.latitude))
+		if (Double.doubleToLongBits(latitude) != Double.doubleToLongBits(other.latitude))
 			return false;
-		if (Float.floatToIntBits(longitude) != Float.floatToIntBits(other.longitude))
+		if (Double.doubleToLongBits(longitude) != Double.doubleToLongBits(other.longitude))
 			return false;
 		return true;
 	}
 
-	public void setLatitude(float latitude) {
+	public void setLatitude(Double latitude) {
 		this.latitude = latitude;
 	}
 
-	public void setLongitude(float longitude) {
+	public void setLongitude(Double longitude) {
 		this.longitude = longitude;
 	}
 }

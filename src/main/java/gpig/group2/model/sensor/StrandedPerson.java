@@ -23,6 +23,19 @@ public class StrandedPerson {
 	@XmlElement
 	private DateTime timeIdentified;
 
+	private String imageUrl;
+
+	@XmlTransient
+	public String getImageUrl() {
+
+		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl) {
+
+		this.imageUrl = imageUrl;
+	}
+
 	public StrandedPerson() {
 	}
 
