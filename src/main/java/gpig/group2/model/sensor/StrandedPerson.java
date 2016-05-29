@@ -13,6 +13,17 @@ import gpig.group2.model.adaptors.JodaDateTimeAdaptor;
 @XmlRootElement
 public class StrandedPerson {
 
+	@XmlTransient
+	public int getOwningTask() {
+		return owningTask;
+	}
+
+	public void setOwningTask(int owningTask) {
+		this.owningTask = owningTask;
+	}
+
+	@XmlElement
+	private int owningTask;
 
 	@XmlElement
 	private int id;
@@ -27,6 +38,7 @@ public class StrandedPerson {
 	@XmlElement
 	private DateTime timeIdentified;
 
+	@XmlElement
 	private String imageUrl;
 
 	@XmlTransient
