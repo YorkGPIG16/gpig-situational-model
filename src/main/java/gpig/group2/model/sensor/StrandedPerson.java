@@ -13,6 +13,10 @@ import gpig.group2.model.adaptors.JodaDateTimeAdaptor;
 @XmlRootElement
 public class StrandedPerson {
 
+
+	@XmlElement
+	private int id;
+
 	@XmlElement
 	private Point location;
 
@@ -37,6 +41,15 @@ public class StrandedPerson {
 	}
 
 	public StrandedPerson() {
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	@XmlTransient
+	public int getId() {
+		return this.id;
 	}
 
 	public StrandedPerson(Point location, int estimatedNumber, DateTime timeIdentified, String imageUrl) {
